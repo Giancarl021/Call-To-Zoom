@@ -1,11 +1,9 @@
 {
   "expo": {
-    "name": "Call-To-Zoom",
-    "slug": "Call-To-Zoom",
+    "name": "Acessar Reunião por Telefone",
+    "slug": "accessmeetingbyphone",
     "platforms": [
-      "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#b8eaf2"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

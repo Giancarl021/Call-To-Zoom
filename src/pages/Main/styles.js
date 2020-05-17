@@ -8,7 +8,7 @@ export const Container = styled.SafeAreaView`
     width: 100%;
     height: 100%;
     flex: 1;
-    background-color: #ffac70;
+    background-color: #b8eaf2;
 `;
 
 export const Scroll = styled.ScrollView``;
