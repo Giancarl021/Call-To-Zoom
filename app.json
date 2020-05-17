@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Acessar Reunião por Telefone",
-    "slug": "accessmeetingbyphone",
+    "slug": "access-meeting-by-phone",
+    "description": "Um aplicativo que permite conectar-se à Reuniões do Zoom por telefone.",
     "platforms": [
       "android"
     ],
@@ -19,8 +20,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.giancarl021.accessmeetingbyphone",
+      "adaptiveIcon": {
+        "backgroundColor": "#b8eaf2",
+        "foregroundImage": "./assets/icon.png"
+      }
     }
   }
 }
