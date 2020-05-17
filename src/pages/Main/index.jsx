@@ -10,14 +10,14 @@ export default function () {
   const [company, setCompany] = useState(0);
   const [option, setOption] = useState('');
   const radio = [
-    // { label: "CTBC/Algar - 12", value: 12 },
+    { label: "Algar - 12", value: 12 },
     { label: "Vivo - 15", value: 15 },
     { label: "TIM - 41", value: 41 },
     { label: "Claro - 21", value: 21 },
     { label: "Oi - 14", value: 14 },
     { label: "Oi - 31", value: 31 },
-    // { label: "Sercomtel - 43", value: 43 },
-    // { label: "Nextel - 99", value: 99 },
+    { label: "Sercomtel - 43", value: 43 },
+    { label: "Nextel - 99", value: 99 },
   ];
 
   const options = [
@@ -63,7 +63,7 @@ export default function () {
             {...item}
           />
         ))}
-        <SendButton enabled={id && pass & company && option} text="Ligar" onClick={call}></SendButton>
+        <SendButton enabled={id && pass && company && option} text="Ligar" onClick={call}></SendButton>
       </Scroll>
     </Container>
   );
@@ -81,6 +81,6 @@ export default function () {
   }
 
   function call() {
-    Linking.openURL(`tel:+55${option},,${id}%23,,%23,${pass}%23}`);
+    Linking.openURL(`tel:0${company}${option},,${id}%23,,%23,${pass}%23}`);
   }
 }
