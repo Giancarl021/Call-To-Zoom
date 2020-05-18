@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { Linking } from 'react-native';
-import { Container, Title, Label, Number, Scroll } from "./styles";
+import { Linking } from "react-native";
+import {
+  Container,
+  Title,
+  Label,
+  Number,
+  Scroll,
+  Note,
+  B1,
+  B2,
+  Mark,
+} from "./styles";
 import RadioButton from "../../components/RadioButton";
 import SendButton from "../../components/SendButton";
 
@@ -8,7 +18,7 @@ export default function () {
   const [id, setId] = useState("");
   const [pass, setPass] = useState("");
   const [company, setCompany] = useState(0);
-  const [option, setOption] = useState('');
+  const [option, setOption] = useState("");
   const radio = [
     { label: "Algar - 12", value: 12 },
     { label: "Vivo - 15", value: 15 },
@@ -21,8 +31,8 @@ export default function () {
   ];
 
   const options = [
-    { label: "SP", value: '1146806788' },
-    { label: "RJ", value: '2139587888' },
+    { label: "SP", value: "1146806788" },
+    { label: "RJ", value: "2139587888" },
   ];
 
   return (
@@ -63,7 +73,17 @@ export default function () {
             {...item}
           />
         ))}
-        <SendButton enabled={id && pass && company && option} text="Ligar" onClick={call}></SendButton>
+        <SendButton
+          enabled={id && pass && company && option}
+          text="Ligar"
+          onClick={call}
+        />
+        <Note>
+          <B1>Importante:</B1> Caso seu discador abra sem a parte grifada do
+          exemplo abaixo, <B2>não disque</B2>. Seu discador não é compatível com
+          a tecnologia usada por este app. {'\n\n'}
+          0xxXXXXXXXXXX<Mark>,,ID#,,#,SENHA#</Mark>
+        </Note>
       </Scroll>
     </Container>
   );
@@ -81,6 +101,7 @@ export default function () {
   }
 
   function call() {
-    Linking.openURL(`tel:0${company}${option},,${id}%23,,%23,${pass}%23}`);
+    const uri = encodeURI(`tel:0${company}${option},,${id}#,,#,${pass}#}}`);
+    Linking.openURL(uri);
   }
 }

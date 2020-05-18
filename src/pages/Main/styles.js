@@ -42,3 +42,25 @@ export const RadioContainer = styled.View`
     display: flex;
     padding: 20px;
 `;
+
+export const Note = styled.Text`
+    padding: 20px;
+    background-color: #0002;
+    color: #444;
+    font-size: 20px;
+    text-align: justify;
+    margin: 10px 0;
+`;
+
+export const B1 = styled.Text`
+    font-weight: bold;
+`;
+
+export const B2 = styled.Text`
+    text-transform: uppercase;
+    color: #000;
+`;
+
+export const Mark = styled.Text`
+    color: #d00;
+`;
