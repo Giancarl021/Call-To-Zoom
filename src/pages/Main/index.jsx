@@ -101,7 +101,7 @@ export default function () {
   }
 
   function call() {
-    const uri = encodeURI(`tel:0${company}${option},,${id}#,,#,${pass}#}}`);
+    const uri = 'tel:' + encodeURIComponent(`0${company}${option},,${id}#,,#,${pass}#}}`);
     Linking.openURL(uri);
   }
 }

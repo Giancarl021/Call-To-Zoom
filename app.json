@@ -25,7 +25,8 @@
       "adaptiveIcon": {
         "backgroundColor": "#b8eaf2",
         "foregroundImage": "./assets/icon.png"
-      }
+      },
+      "permissions": []
     }
   }
 }
